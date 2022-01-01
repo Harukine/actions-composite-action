@@ -12,6 +12,6 @@ jobs:
 
       - name: First composite action step
         id: compositeaction
-        uses: harukine/actions-composite-action/compositeaction@v1
+        uses: harukine/actions-composite-action/composite-action@v1
         with:
           your-name: 'TestName'
