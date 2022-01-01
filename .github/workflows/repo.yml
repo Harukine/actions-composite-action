@@ -7,11 +7,13 @@ jobs:
   composite_action_job:
     runs-on: ubuntu-latest
     steps:
+      - name: Check directory
+        run: ls -R
+
       - name: First composite action step
         id: compositeaction
         uses: harukine/actions-composite-action/compositeaction@v1
         with:
           your-name: 'TestName'
 
-      - name: Check directory
-        run: ls
+
