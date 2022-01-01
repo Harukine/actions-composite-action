@@ -12,3 +12,6 @@ jobs:
         uses: harukine/actions-composite-action/compositeaction@v1
         with:
           your-name: 'TestName'
+
+      - name: Check directory
+        run: ls
