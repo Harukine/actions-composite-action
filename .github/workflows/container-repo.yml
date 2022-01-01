@@ -1,0 +1,16 @@
+name: Container action referring to action in repo folder
+
+on:
+  workflow_dispatch:
+
+jobs:
+  container_action_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: First container action step
+        id: containeraction
+        uses: harukine/actions-composite-action/container-action@v4
+        with:
+          your-name: 'TestName'
+      - name: Get the output time
+        run: echo "The time was ${{ steps.containeraction.outputs.timeofmessage }}"
